@@ -1,0 +1,21 @@
+# Ignore virtual environment
+myenv/
+venv/
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore model files if they’re too big (optional, remove if you want to track)
+*.pkl
+
+# Ignore system/IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
