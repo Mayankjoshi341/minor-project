@@ -1,12 +1,17 @@
 import streamlit as st
 import pandas as pd
 from joblib import load
+import os
 
-# Load model and data
-model = load('attrition_model.pkl')
-data = pd.read_csv('hr_manages.csv')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# --- Page setup ---
+model_path = os.path.join(BASE_DIR, "attrition_model.pkl")
+data_path = os.path.join(BASE_DIR, "hr_manages.csv")
+
+
+model = load(model_path)
+data = pd.read_csv(data_path)
+
 st.set_page_config(page_title="Employee Attrition Predictor", page_icon="🏢", layout="wide")
 
 

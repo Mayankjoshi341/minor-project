@@ -1,1 +1,0 @@
-pd.read_csv('hr_manages.csv')
